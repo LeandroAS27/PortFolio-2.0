@@ -22,7 +22,7 @@ const Projects:React.FC = () => {
                     transition={{ duration: 0.3}}
                     className="bg-transparent border-2 w-full h-full p-6 shadow-lg rounded hover:shadow-[0_0_12px_5px_rgba(65,105,225,0.5)]"
                 >
-                    <h1 className="text-2xl text-center mb-4 font-bold font-montserrat">CommerceComics</h1>
+                    <h1 className="text-2xl text-center mb-4 font-bold font-montserrat text-white">CommerceComics</h1>
                     <div className="w-full h-48 relative">
                         <Image 
                             src={commerce} 
