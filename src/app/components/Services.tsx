@@ -1,16 +1,31 @@
+"use client"
+
+//framer motion
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+
 //images
 import pc from '../../../public/icons8-código-do-google-96.png';
 import Image from 'next/image';
 
-const Services = () => {
+const Services:React.FC = () => {
+    const {ref, inView} = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+    })
     return(
-        <section 
+        <motion.section 
         id="Serviços" 
+        ref={ref}
         className="bg-[#242121] min-h-screen w-full flex flex-col justify-center items-center"
         >
             <h1 className='font-bold text-4xl sm:text-5xl my-4 text-white font-montserrat'>Serviços</h1>
             <div className="bg-[#FBBF24] w-5/6 sm:w-4/6 md:w-3/6 lg:w-2/6 h-auto flex flex-col justify-center items-center rounded-lg p-6 sm:p-8 sm:space-y-6">
-                <div className='flex flex-col items-center gap-4'>
+                <motion.div 
+                initial={{opacity:0, y: 50}}
+                animate={inView ? { opacity: 1, y: 0} : {}}
+                transition={{ duration: 0.9, ease: "easeOut"}}
+                className='flex flex-col items-center gap-4'>
                     <Image 
                     src={pc} 
                     alt='imagem de um computador'
@@ -29,9 +44,9 @@ const Services = () => {
                     >
                         Saiba mais
                     </a>
-                </div>
+                </motion.div>
             </div>
-        </section>
+        </motion.section>
     )
 }
 

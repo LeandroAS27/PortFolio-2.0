@@ -8,14 +8,24 @@ import github from '../../../public/icons8-github-96.png';
 
 //framer motion
 import { motion } from 'framer-motion';
+import { useInView } from "react-intersection-observer";
 
 const Projects:React.FC = () => {
+    const {ref, inView} = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+    })
     return(
-        <section 
-        id="Projetos" 
-        className="min-h-screen bg-[#292626] w-full flex flex-col justify-center items-center">
+        <motion.section 
+            id="Projetos"
+            ref={ref}
+            className="min-h-screen bg-[#292626] w-full flex flex-col justify-center items-center">
             <h1 className="font-bold text-4xl my-8 text-white text-montserrat">Projetos</h1>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 px-4 justify-center items-center">
+            <motion.div 
+            initial={{opacity:0, y: 50}}
+            animate={inView ? { opacity: 1, y: 0} : {}}
+            transition={{ duration: 0.9, ease: "easeOut"}}
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 px-4 justify-center items-center">
                 {/* card do projeto 1 */}
                 <motion.div 
                     whileHover={{ scale: 1.05 }}
@@ -204,8 +214,8 @@ const Projects:React.FC = () => {
                         Quaerat exercitationem ducimus, consequatur doloremque cumque sunt saepe!
                     </p>
                 </motion.div>
-            </div>
-        </section>
+            </motion.div>
+        </motion.section>
     )
 }
 
