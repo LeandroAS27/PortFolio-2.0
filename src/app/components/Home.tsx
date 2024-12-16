@@ -20,10 +20,14 @@ import { ClipboardIconButton, ClipboardRoot } from "@/components/ui/clipboard"
 //framer motion
 import { motion } from "framer-motion";
 
+//context
+import { useTheme } from "../context/ThemeContext";
+
 
 const Initial: React.FC = () => {
     const [activeSection, setActiveSection ] = useState<string>('home');
-    const [isClient, setIsClient] = useState(false);
+    const [isClient, setIsClient] = useState<boolean>(false);
+    const { isDarkMode, toggleTheme } = useTheme();
 
     const scrollToSection = (section:string) =>{
         const target = document.getElementById(section);
@@ -61,15 +65,15 @@ const Initial: React.FC = () => {
 
     return(
         <>
-            <header className="flex flex-col sm:flex-row items-center justify-between w-full bg-[#171616] h-auto sm:h-20 px-4 shadow-[rgba(255,255,255,0.9)]">
+            <header className="flex flex-col sm:flex-row items-center justify-between w-full bg-[#808080] dark:bg-[#171616] h-auto sm:h-20 px-4 shadow-[rgba(255,255,255,0.9)]">
                 <div className="flex items-center space-x-2 my-4">
                     <Image 
                     src={email} 
                     alt="icone de email" 
                     width={32} height={32} 
-                    className="object-contain filter invert"/>
+                    className="object-contain filter dark:invert"/>
 
-                    <p className="font-lato text-white">leandroAS27@gmail.com</p>
+                    <p className="font-lato dark:text-white text-black">leandroAS27@gmail.com</p>
 
                     <ClipboardRoot value="leandroAS27@gmail.com">
                         <ClipboardIconButton color="yellow.500" />
@@ -84,7 +88,7 @@ const Initial: React.FC = () => {
                                 whileHover={{ scale: 1.1, color: "#FBBF24" }}
                                 whileTap={{ scale: 0.9 }}
                                 onClick={() => scrollToSection(section)}
-                                className={`text-lg font-medium text-white hover:underline underline-offset-4 hover:decoration-2 ${activeSection === section ? 'text-yellow-500' : ''}`}
+                                className={`text-lg font-medium hover:underline underline-offset-4 hover:decoration-2 ${activeSection === section ? 'text-yellow-500' : ''}`}
                             >
                                 {section.charAt(0).toUpperCase() + section.slice(1)}
                             </motion.button>
@@ -95,6 +99,8 @@ const Initial: React.FC = () => {
                         colorPalette="blue"
                         size="lg"
                         className="my-4 hidden sm:block"
+                        checked={isDarkMode}
+                        onChange={toggleTheme}
                         trackLabel={{
                             on:
                                 <FaSun color="yellow"/>,
@@ -106,7 +112,7 @@ const Initial: React.FC = () => {
             </header>
 
             <main>
-                <section id="Home" className="h-screen min-h-screen w-full bg-[#1c1a1a] flex justify-center items-center px-6 relative">
+                <section id="Home" className="h-screen min-h-screen w-full bg-[#e3e3e3] dark:bg-[#1c1a1a] flex justify-center items-center px-6 relative">
                     <div className="flex flex-col sm:flex-row items-center sm:items-start gap-2 sm:gap-4">
                         {/* Foto com borda azul Glow */}
                         <div className="flex justify-center sm:justify-start items-center">
@@ -118,11 +124,11 @@ const Initial: React.FC = () => {
                         </div>
 
                         {/* Informações ao lado da imagem */}
-                        <div className="sm:ml-10 text-white flex flex-col max-w-2xl gap-4 text-center sm:text-left">
+                        <div className="sm:ml-10 flex flex-col max-w-2xl gap-4 text-center sm:text-left">
                             <div>
-                                <h1 className="text-4xl font-bold mb-2 font-montserrat">Olá, meu nome é Leandro &#128075;</h1>
+                                <h1 className="text-4xl font-bold mb-2 font-montserrat text-black dark:text-white">Olá, meu nome é Leandro &#128075;</h1>
                                 <h2 className="text-2xl font-montserrat"><strong className="text-[#4169E1]">Desenvolvedor Front-End</strong></h2> {/* colocar a cor azul royal */}
-                                <p className="mt-4 text-md leading-relaxed text-wrap font-lato">Sou desenvolvedor front-end 
+                                <p className="mt-4 text-md leading-relaxed text-wrap font-lato text-black dark:text-white">Sou desenvolvedor front-end 
                                 com experiência em criar aplicações web modernas e funcionais, 
                                 utilizando tecnologias como React, JavaScript, TypeScript, Redux, Tailwind e SASS. 
                                 Meu foco está em ajudar negócios a se destacarem com interfaces que são rápidas, 
@@ -139,7 +145,7 @@ const Initial: React.FC = () => {
                                     src={linkedin} 
                                     alt="Logo do linkedin" 
                                     width={32} height={32}
-                                    className="filter invert"
+                                    className="filter dark:invert"
                                     />
                                 </a>
                                 <a 
@@ -150,7 +156,7 @@ const Initial: React.FC = () => {
                                     src={instagram} 
                                     alt="Logo do Instagram" 
                                     width={32} height={32}
-                                    className="filter invert"
+                                    className="filter dark:invert"
                                     />
                                 </a>
                                 <a 
@@ -161,7 +167,7 @@ const Initial: React.FC = () => {
                                     src={whatapp}
                                     alt="Logo do whatsapp" 
                                     width={32} height={32}
-                                    className="filter invert"
+                                    className="filter dark:invert"
                                     />
                                 </a>
                                 <a 
@@ -172,12 +178,12 @@ const Initial: React.FC = () => {
                                     src={github} 
                                     alt="Logo do github" 
                                     width={32} height={32}
-                                    className="filter invert"
+                                    className="filter dark:invert"
                                     />
                                 </a>
                             </div>
                         </div>
-                        <div className="absolute -bottom-20 sm:bottom-0 left-0 right-0 flex justify-center mb-20 filter invert">
+                        <div className="absolute -bottom-20 sm:bottom-0 left-0 right-0 flex justify-center mb-20 filter dark:invert">
                             <Image 
                             src={seta} 
                             alt="imagem de uma seta para baixo"

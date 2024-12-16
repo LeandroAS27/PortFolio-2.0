@@ -16,14 +16,18 @@ import servicos from '../../../public/icons8-mala-96.png';
 import projetos from '../../../public/icons8-projeto-96.png';
 import contato from '../../../public/icons8-nova-mensagem-96.png';
 
+//context
+import { useTheme } from "../context/ThemeContext";
+
 const ModalHeader = () => {
     const isHomeVisible = useIsHomeVisible();
-
+    const { isDarkMode, toggleTheme } = useTheme();
+    
 
     return(
         <>
             <div 
-            className={`fixed w-full sm:w-1/4 flex justify-center space-x-4 items-center top-4 right-4 bg-[#e3e3e3] bg-opacity-80 text-white p-4 sm:p-6 rounded-lg shadow-lg transition-transform ${
+            className={`fixed w-full sm:w-1/4 flex justify-center space-x-4 items-center top-4 right-4 bg-[#333] bg-opacity-80 dark:bg-[#e3e3e3] dark:bg-opacity-80 text-white p-4 sm:p-6 rounded-lg shadow-lg transition-transform ${
                 isHomeVisible ? 'translate-y-[-200%]' : 'translate-y-[0]'
             }`}
             >
@@ -80,6 +84,8 @@ const ModalHeader = () => {
                 <Switch
                         colorPalette="blue"
                         size="lg"
+                        checked={isDarkMode}
+                        onChange={toggleTheme}
                         trackLabel={{
                             on:
                                 <FaSun color="yellow"/>,

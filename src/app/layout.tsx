@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Provider } from '@/components/ui/provider'
 import { Montserrat, Lato} from 'next/font/google';
+import { ThemeProvider } from './context/ThemeContext';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -30,7 +31,11 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${lato.variable} antialiased`}
       >
-        <Provider>{children}</Provider>
+        <ThemeProvider>
+          <Provider>
+            {children}
+          </Provider>
+        </ThemeProvider>
       </body>
     </html>
   );

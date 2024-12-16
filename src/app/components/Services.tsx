@@ -17,10 +17,13 @@ const Services:React.FC = () => {
         <motion.section 
         id="Serviços" 
         ref={ref}
-        className="bg-[#242121] min-h-screen w-full flex flex-col justify-center items-center"
+        className="bg-[#cfcfcf] dark:bg-[#242121] min-h-screen w-full flex flex-col justify-center items-center"
         >
-            <h1 className='font-bold text-4xl sm:text-5xl my-4 text-white font-montserrat'>Serviços</h1>
-            <div className="bg-[#FBBF24] w-5/6 sm:w-4/6 md:w-3/6 lg:w-2/6 h-auto flex flex-col justify-center items-center rounded-lg p-6 sm:p-8 sm:space-y-6">
+            <h1 className='font-bold text-4xl sm:text-5xl my-8 text-black dark:text-white font-montserrat'>Serviços</h1>
+            <motion.div 
+            whileHover={{scale: 1.1}}
+            transition={{duration: 0.4, ease: "easeOut"}}
+            className="bg-[#FBBF24] w-5/6 sm:w-4/6 md:w-3/6 lg:w-2/6 h-auto flex flex-col justify-center items-center rounded-lg p-6 sm:p-8 sm:space-y-6">
                 <motion.div 
                 initial={{opacity:0, y: 50}}
                 animate={inView ? { opacity: 1, y: 0} : {}}
@@ -31,8 +34,8 @@ const Services:React.FC = () => {
                     alt='imagem de um computador'
                     className='w-32 sm:w-48'
                     />
-                    <h2 className='font-bold text-2xl sm:text-3xl text-center text-white font-montserrat'>Desenvolvimento de Site</h2>
-                    <p className='text-center text-sm sm:text-md text-white font-lato'>
+                    <h2 className='font-bold text-2xl sm:text-3xl text-center text-black dark:text-white font-montserrat'>Desenvolvimento de Site</h2>
+                    <p className='text-center text-sm sm:text-md text-black dark:text-white font-lato'>
                         Transformo suas ideias em sites e lojas virtuais rápidos, interativos e responsivos. Utilizando HTML,
                         CSS, JavaScript, TypeScript e o poderoso framework React, crio interfaces modernas para seus usuários em qualquer
                         dispositivo. Com as melhores práticas de desenvolvimento, garanto uma experiência única, unindo performance, design e funcionalidade
@@ -45,7 +48,7 @@ const Services:React.FC = () => {
                         Saiba mais
                     </a>
                 </motion.div>
-            </div>
+            </motion.div>
         </motion.section>
     )
 }
