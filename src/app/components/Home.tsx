@@ -72,7 +72,7 @@ const Initial: React.FC = () => {
                     <p className="font-lato text-white">leandroAS27@gmail.com</p>
 
                     <ClipboardRoot value="leandroAS27@gmail.com">
-                        <ClipboardIconButton />
+                        <ClipboardIconButton color="yellow.500" />
                     </ClipboardRoot>
 
                 </div>
