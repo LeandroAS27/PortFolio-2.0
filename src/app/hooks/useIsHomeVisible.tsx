@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const useIsHomeVisible:React.FC = () => {
+const useIsHomeVisible = ():boolean => {
     const [isHomeVisible, setIsHomeVisible] = useState<boolean>(true);
 
     useEffect(() => {

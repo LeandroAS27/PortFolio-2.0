@@ -7,7 +7,6 @@ import useIsHomeVisible from "../hooks/useIsHomeVisible";
 
 //material ui
 import { Switch } from "@/components/ui/switch";
-import { Icon } from "@chakra-ui/react";
 import { FaMoon, FaSun } from "react-icons/fa";
 
 //images
