@@ -5,6 +5,7 @@ import Image from "next/image";
 import commerce from "../../../public/Tela inicial.png";
 import arrow from "../../../public/icons8-para-a-direita-com-quadrado-96.png";
 import github from '../../../public/icons8-github-96.png';
+import estetica from '../../../public/Tela inicial 2.png';
 
 //framer motion
 import { motion } from 'framer-motion';
@@ -83,10 +84,11 @@ const Projects:React.FC = () => {
                 transition={{ duration: 0.3}}
                 className="bg-transparent border-2 border-white w-full h-full p-6 shadow-lg rounded hover:shadow-[0_0_12px_5px_rgba(65,105,225,0.5)]"
                 >
+                    <h1 className="text-2xl text-center mb-4 font-bold font-montserrat text-white">EsteticaCaseOne</h1>
                     <div className="w-full h-48 relative">
                         <Image 
-                        src={commerce} 
-                        alt="imagem do projeto ecommerce"
+                        src={estetica} 
+                        alt="imagem do projeto EsteticaCaseOne"
                         layout="fill"
                         objectFit="contain"
                         />
@@ -95,34 +97,36 @@ const Projects:React.FC = () => {
                     <div className="p-4">
                         <div className="flex justify-between mb-4 space-x-4">
                             <a 
-                            href="https://comics-commerce.vercel.app" 
+                            href="https://estetica-case.vercel.app" 
                             target="_blank" 
                             className="flex items-center justify-center gap-2 py-2 px-4 bg-transparent border-2 border-white text-white rounded-md hover:bg-blue-600 transition-colors">
                             <Image 
                             src={arrow} 
                             alt="icone de uma seta para a direita" 
-                            className=""
+                            className="filter dark:invert"
                             width={32} height={32}/>
                                 Prévia
                             </a>
 
                             <a 
-                            href="https://github.com/LeandroAS27/ComicsCommerce" 
+                            href="https://github.com/LeandroAS27/esteticaCase" 
                             target="_blank" 
                             className="flex items-center justify-center gap-2 py-2 px-4 bg-transparent border-2 border-white text-white rounded-md hover:bg-blue-600 transition-colors">
                             <Image 
                             src={github}
                             alt="icone do github" 
+                            className="fliter dark:invert"
                             width={32} height={32}/>
                                 Repositório
                             </a>
 
                         </div>
                     </div>
-                    <p className="text-black dark:text-white text-sm">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Animi alias temporibus vel doloremque ullam, eum, eligendi placeat ad debitis dolores hic odit. 
-                        Quaerat exercitationem ducimus, consequatur doloremque cumque sunt saepe!
+                    <p className="text-black dark:text-white text-md font-lato">
+                        Desenvolvi uma landing page estratégica para uma empresa de estética, utilizando <strong>Next.js</strong>, <strong>React</strong>, <strong>TailwindCSS</strong> e <strong>TypeScript</strong>. 
+                        O projeto foi criado com foco de atrair novos clientes, facilitando a comunicação e fortalecendo 
+                        a presença digital da marca. Com um design moderno e responsivo, aliado a uma otimização de <strong>SEO</strong> eficaz, 
+                        a página entrega uma experiência fluida e engajante, destacando os valores e serviços da empresa.
                     </p>
                 </motion.div>
                 {/* card do projeto 3 */}
