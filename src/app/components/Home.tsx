@@ -73,7 +73,7 @@ const Initial: React.FC = () => {
                     width={32} height={32} 
                     className="object-contain filter dark:invert"/>
 
-                    <p className="font-lato dark:text-white text-black">leandroAS27@gmail.com</p>
+                    <p className="font-lato dark:text-white text-black">leandroASdev@gmail.com</p>
 
                     <ClipboardRoot value="leandroAS27@gmail.com">
                         <ClipboardIconButton color="yellow.500" />
