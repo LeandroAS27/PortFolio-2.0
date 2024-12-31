@@ -6,6 +6,7 @@ import commerce from "../../../public/Tela inicial.png";
 import arrow from "../../../public/icons8-para-a-direita-com-quadrado-96.png";
 import github from '../../../public/icons8-github-96.png';
 import estetica from '../../../public/Tela inicial 2.png';
+import barbearia from '../../../public/Tela inicial 3.png';
 
 //framer motion
 import { motion } from 'framer-motion';
@@ -135,9 +136,10 @@ const Projects:React.FC = () => {
                 transition={{ duration: 0.3}}
                 className="bg-transparent border-2 w-full h-full p-6 shadow-lg rounded hover:shadow-[0_0_12px_5px_rgba(65,105,225,0.5)]"
                 >
+                    <h1 className="text-2xl text-center mb-4 font-bold font-montserrat text-white">BarberCase</h1>
                     <div className="w-full h-48 relative">
                         <Image 
-                        src={commerce} 
+                        src={barbearia} 
                         alt="imagem do projeto ecommerce"
                         layout="fill"
                         objectFit="contain"
@@ -147,32 +149,44 @@ const Projects:React.FC = () => {
                     <div className="p-4">
                         <div className="flex justify-between mb-4 space-x-4">
                             <a 
-                            href="https://comics-commerce.vercel.app" 
+                            href="https://barber-case.vercel.app" 
                             target="_blank" 
                             className="flex items-center justify-center gap-2 py-2 px-4 bg-transparent border-2 text-white rounded-md hover:bg-blue-600 transition-colors">
                             <Image 
                             src={arrow} 
-                            alt="icone de uma seta para a direita" 
+                            alt="icone de uma seta para a direita"
+                            className="filter dark:invert" 
                             width={32} height={32}/>
                                 Prévia
                             </a>
 
                             <a 
-                            href="https://github.com/LeandroAS27/ComicsCommerce"
+                            href="https://github.com/LeandroAS27/BarberCase"
                             target="_blank" 
                             className="flex items-center justify-center gap-2 py-2 px-4 bg-transparent border-2 text-white rounded-md hover:bg-blue-600 transition-colors">
                             <Image 
                             src={github} 
-                            alt="icone do github" width={32} height={32}/>
+                            alt="icone do github" width={32} height={32}
+                            className="filter dark:invert"
+                            />
                                 Repositório
                             </a>
 
                         </div>
                     </div>
-                    <p className="text-white text-sm">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Animi alias temporibus vel doloremque ullam, eum, eligendi placeat ad debitis dolores hic odit. 
-                        Quaerat exercitationem ducimus, consequatur doloremque cumque sunt saepe!
+                    <p className="text-black dark:text-white text-md font-lato mb-2">
+                        Criei uma landing page moderna e responsiva para uma barbearia, 
+                        projetada para destacar serviços e facilitar a interação com os clientes. 
+                        A aplicação foi desenvolvida com <strong>React</strong> e <strong>Next.js</strong>, garantindo alta performance, 
+                        SEO otimizado e uma navegação fluida. Utilizei <strong>TypeScript</strong> para maior segurança e manutenibilidade
+                        do código, e o design foi estilizado com <strong>SASS</strong>. Para enriquecer a experiência do usuário, 
+                        implementei animações suaves com <strong>Framer Motion</strong>.
+                    </p>
+
+                    <p className="text-black dark:text-white text-md font-lato">
+                        Na aba de contatos, integrei o <strong>Firebase</strong> para armazenar com segurança as mensagens enviadas 
+                        pelos usuários e gerenciar a autenticação. Isso garante proteção contra acessos não autorizados 
+                        e oferece uma camada adicional de segurança.
                     </p>
                 </motion.div>
                 {/* card do projeto 4 */}
