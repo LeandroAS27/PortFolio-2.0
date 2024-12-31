@@ -75,7 +75,7 @@ const Initial: React.FC = () => {
 
                     <p className="font-lato dark:text-white text-black">leandroASdev@gmail.com</p>
 
-                    <ClipboardRoot value="leandroAS27@gmail.com">
+                    <ClipboardRoot value="leandroASdev@gmail.com">
                         <ClipboardIconButton color="yellow.500" />
                     </ClipboardRoot>
 
