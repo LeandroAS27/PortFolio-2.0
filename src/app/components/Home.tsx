@@ -150,7 +150,7 @@ const Initial: React.FC = () => {
                                     />
                                 </a>
                                 <a 
-                                href="https://www.instagram.com/"
+                                href="https://www.instagram.com/leandroasdev"
                                 target="_blank"
                                 className="rounded-full border-2 border-blue-500 p-2 transition duration-75 ease hover:border-blue-800 hover:scale-125">
                                     <Image 
