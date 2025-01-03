@@ -88,7 +88,7 @@ const Initial: React.FC = () => {
                                 whileHover={{ scale: 1.1, color: "#FBBF24" }}
                                 whileTap={{ scale: 0.9 }}
                                 onClick={() => scrollToSection(section)}
-                                className={`text-lg font-medium hover:underline underline-offset-4 hover:decoration-2 ${activeSection === section ? 'text-yellow-500' : ''}`}
+                                className={`text-lg font-medium text-black dark:text-white hover:underline underline-offset-4 hover:decoration-2 ${activeSection === section ? 'text-yellow-500' : ''}`}
                             >
                                 {section.charAt(0).toUpperCase() + section.slice(1)}
                             </motion.button>
