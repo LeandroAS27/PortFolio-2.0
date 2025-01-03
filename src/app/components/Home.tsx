@@ -128,7 +128,7 @@ const Initial: React.FC = () => {
                             <div>
                                 <h1 className="text-4xl font-bold mb-2 font-montserrat text-black dark:text-white">Olá, meu nome é Leandro &#128075;</h1>
                                 <h2 className="text-2xl font-montserrat"><strong className="text-[#4169E1]">Desenvolvedor Front-End</strong></h2> {/* colocar a cor azul royal */}
-                                <p className="mt-4 text-sm sm:text-base leading-relaxed text-wrap font-lato text-black dark:text-white">
+                                <p className="mt-4 text-sm sm:text-base font-lato text-black dark:text-white">
                                 Sou desenvolvedor front-end 
                                 com experiência em criar aplicações web modernas e funcionais, 
                                 utilizando tecnologias como React, JavaScript, TypeScript, Redux, Tailwind e SASS. 
