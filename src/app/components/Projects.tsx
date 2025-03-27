@@ -8,6 +8,7 @@ import github from '../../../public/icons8-github-96.png';
 import estetica from '../../../public/Tela inicial 2.png';
 import barbearia from '../../../public/Tela inicial 3.png';
 import desenvolvimento from '../../../public/desenvolvimento.jpg';
+import restaurante from '../../../public/tela-inicial-restaurante.png';
 
 //framer motion
 import { motion } from 'framer-motion';
@@ -196,10 +197,10 @@ const Projects:React.FC = () => {
                 transition={{ duration: 0.3}}
                 className="bg-transparent border-2 border-white w-full h-full p-6 shadow-lg rounded hover:shadow-[0_0_12px_5px_rgba(65,105,225,0.5)]"
                 >
-                    <h1 className="text-2xl text-center mb-4 font-bold font-montserrat text-white">ImobiliáriaCase</h1>
+                    <h1 className="text-2xl text-center mb-4 font-bold font-montserrat text-white">Maria Farofa Bar e Restaurante</h1>
                     <div className="w-full h-48 relative">
                         <Image 
-                        src={desenvolvimento} 
+                        src={restaurante} 
                         alt="imagem do projeto ecommerce"
                         layout="fill"
                         objectFit="contain"
@@ -209,7 +210,7 @@ const Projects:React.FC = () => {
                     <div className="p-4">
                         <div className="flex justify-between mb-4 space-x-4">
                             <a 
-                            href="https://comics-commerce.vercel.app" 
+                            href="https://mariafarofa.vercel.app/" 
                             target="_blank" 
                             className="flex items-center justify-center gap-2 py-2 px-4 bg-transparent border-2 border-white text-white rounded-md hover:bg-blue-600 transition-colors">
                             <Image 
@@ -221,7 +222,7 @@ const Projects:React.FC = () => {
                             </a>
 
                             <a 
-                            href="https://github.com/LeandroAS27/ComicsCommerce" 
+                            href="https://github.com/LeandroAS27/mariafarofacase" 
                             target="_blank" 
                             className="flex items-center justify-center gap-2 py-2 px-4 bg-transparent border-2 border-white text-white rounded-md hover:bg-blue-600 transition-colors">
                             <Image 
@@ -233,8 +234,15 @@ const Projects:React.FC = () => {
                             </a>
                         </div>
                     </div>
-                    <p className="text-dark text-xl dark:text-white flex justify-center">
-                        Projeto em Desenvolvimento
+                    <p className="text-black text-md dark:text-white flex font-lato mb-2">
+                        Desenvolvi a Landing Page do Maria Farofa, um bar e restaurante especializado em comida nordestina. 
+                        Para isso, utilizei as tecnologias mais modernas, como Next.js, React, TypeScript, Chakra UI, Framer Motion e Tailwind CSS, 
+                        garantindo um site rápido, dinâmico e altamente responsivo.
+                    </p>
+
+                    <p className="text-black text-md dark:text-white flex font-lato">
+                        Com um design moderno e interativo, a página não só transmite a essência do Maria Farofa, 
+                        mas também oferece uma experiência de navegação que prende a atenção e facilita a conversão de visitantes em clientes.
                     </p>
                 </motion.div>
             </motion.div>
