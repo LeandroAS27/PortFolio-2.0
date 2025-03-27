@@ -7,7 +7,7 @@ import arrow from "../../../public/icons8-para-a-direita-com-quadrado-96.png";
 import github from '../../../public/icons8-github-96.png';
 import estetica from '../../../public/Tela inicial 2.png';
 import barbearia from '../../../public/Tela inicial 3.png';
-import desenvolvimento from '../../../public/desenvolvimento.jpg';
+// import desenvolvimento from '../../../public/desenvolvimento.jpg';
 import restaurante from '../../../public/tela-inicial-restaurante.png';
 
 //framer motion
